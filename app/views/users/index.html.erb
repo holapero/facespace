@@ -1,2 +1,14 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h1>Meet our users:</h1>
+<br />
+<% @users.each do |user| %>
+<fieldset>
+  <section>
+    <div>
+      <a class="pull-left" href="#">
+      <%= image_tag(gravatar_url(user.email), class: 'media-object') %>
+      </a>
+      <h2><%= user.name %></h2>
+    </div>
+  </section>
+</fieldset>
+<% end %>
