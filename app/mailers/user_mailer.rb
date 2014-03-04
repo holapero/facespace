@@ -6,4 +6,8 @@ class UserMailer < ActionMailer::Base
     @user = user
     mail(to: @user.email, subject: 'Welcome to FaceSpace')  
   end
+  def leaving(user)
+    @user = user
+    mail(to: @user.email, subject: 'We are ad you are leaving us.')
+  end
 end

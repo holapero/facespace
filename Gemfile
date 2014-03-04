@@ -17,6 +17,8 @@ gem "twitter-bootstrap-rails"
 group :development do 
   gem 'ffaker'
   gem "letter_opener"
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :doc do
