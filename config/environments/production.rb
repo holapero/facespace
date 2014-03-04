@@ -79,7 +79,7 @@ FaceSpace::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
 
-  config.action.mailer.smtp_settings = {
+  config.action_mailer.smtp_settings = {
       :port =>           '587',
       :address =>        'smtp.mandrillapp.com',
       :user_name =>      ENV['MANDRILL_USERNAME'],
@@ -87,7 +87,7 @@ FaceSpace::Application.configure do
       :domain =>         'heroku.com',
       :authentication => :plain
     }
-     config.action.mailer.delivery_method = :smtp
+     config.action_mailer.delivery_method = :smtp
 end
 
 
