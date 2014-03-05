@@ -1,0 +1,13 @@
+<h1>Contact Us.</h1>
+<%= form_tag(contact_path, method: "post") do %>
+<div class='control-group'>
+  <%= text_field_tag(:name,"", placeholder: 'Name') %><br />
+</div>
+<div class='control-group'>
+  <%= text_field_tag(:email,"", placeholder: 'Email') %><br />
+</div>
+<div class='control-group'>
+  <%= text_area_tag(:concern, "",placeholder: 'Concern') %><br />
+</div>
+<%= submit_tag("Submit") %>
+<% end %>
