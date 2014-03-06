@@ -1,13 +1,13 @@
 <h1>Contact Us.</h1>
-<%= form_tag(contact_path, method: "post") do %>
+<%= form_for(@contact, url: contact_path) do |f| %>
 <div class='control-group'>
-  <%= text_field_tag(:name,"", placeholder: 'Name') %><br />
+  <%= f.text_field(:name, placeholder: 'Name') %><br />
 </div>
 <div class='control-group'>
-  <%= text_field_tag(:email,"", placeholder: 'Email') %><br />
+  <%= f.email_field(:email, placeholder: 'Email') %><br />
 </div>
 <div class='control-group'>
-  <%= text_area_tag(:concern, "",placeholder: 'Concern') %><br />
+  <%= f.text_area(:concern, placeholder: 'Concern') %><br />
 </div>
-<%= submit_tag("Submit") %>
+<%= f.submit("Submit") %>
 <% end %>
