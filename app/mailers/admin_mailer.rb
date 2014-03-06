@@ -4,4 +4,8 @@ class AdminMailer < ActionMailer::Base
     @contact = contact
     mail(subject: "New contact")
   end
+   def newsletter(params)
+    @params = params
+    mail(subject: "New Subscriber")
+  end
 end

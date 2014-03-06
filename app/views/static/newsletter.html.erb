@@ -1,0 +1,10 @@
+<h1>Want our Newsletter?</h1>
+<%= form_tag(newsletter_path, method: "post") do %>
+<div class='control-group'>
+  <%= text_field_tag(:name,'',placeholder:'Name') %><br />
+</div>
+<div class='control-group'>
+  <%= email_field_tag(:email,'',placeholder:'Email') %><br />
+</div>
+<%= submit_tag ("Submit") %>
+<% end %>

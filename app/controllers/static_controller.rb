@@ -13,6 +13,13 @@ class StaticController < ApplicationController
       end
     end
   end
+  def newsletter
+    if request.post?
+      UserMailer.newsletter(params).deliver
+      AdminMailer.newsletter(params).deliver
+      redirect_to newsletter_path, notice: 'Thanks for signing up for the newsletter'
+    end
+  end
   private
   def contact_params
     params.require(:contact).permit(:name, :email, :concern)

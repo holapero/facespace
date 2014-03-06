@@ -8,6 +8,10 @@ class UserMailer < ActionMailer::Base
   end
   def leaving(user)
     @user = user
-    mail(to: @user.email, subject: 'We are ad you are leaving us.')
+    mail(to: @user.email, subject: 'We are sad you are leaving us.')
+  end
+    def newsletter(params)
+    @params = params
+    mail(to: @params[:email], subject: 'Thanks for subscribing.')
   end
 end
